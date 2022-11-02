@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  @media only screen and (min-width: 320px) {
+    padding-top: 24px;
+  }
+
+  &__container {
+    width: 90%;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    'logo logo heart'
+    'search search search';
+    align-items: space-between;
+    justify-content: space-between;
+    @media only screen and (min-width: 320px) {
+      padding: 0 86px;
+    }
+    @media only screen and (min-width: 768px) {
+      grid-template-areas: 'logo search search search search heart';
+      align-items: center;
+      max-width: 1240px;
+      padding: 0 30px;
+    }
+  }
+  
+  &__logo {
+    grid-area: logo;
+  }
+  
+  &__search {
+    grid-area: search;
+    align-self: center;
+    @media only screen and (min-width: 768px) {
+      grid-column: 2 / 6
+    }
+  }
+  
+  &__favorite-btn {
+    grid-area: heart;
+    color: #ffffff;
+    line-height: 0;
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: tomato;
+    }
+  }
+}

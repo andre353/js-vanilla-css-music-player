@@ -1,0 +1,33 @@
+.track {
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  
+  &_active {
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__img-wrap {
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+    line-height: 0;
+    &:after {
+      content: '';
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../img/pause.svg')
+    }
+  }
+
+  &__info {
+    background-color: #ffffff;
+    border-radius: 0 0 12px 12px;
+  }
+}

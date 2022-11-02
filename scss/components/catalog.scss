@@ -1,0 +1,27 @@
+.catalog {
+  &__container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1236px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 148px);
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    @media only screen and (min-width: 320px) {
+      grid-template-columns: repeat(auto-fill, 196px);
+      padding: 0 86px;
+    }
+    @media only screen and (min-width: 768px) {
+      padding: 0 30px;
+    }
+  }
+  &__btn-add {
+    color: #ffffff;
+    grid-column: 1 / -1;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
